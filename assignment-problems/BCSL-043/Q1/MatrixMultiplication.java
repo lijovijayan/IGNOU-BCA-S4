@@ -1,3 +1,4 @@
+package Q1;
 public class MatrixMultiplication {
 
   // Function to multiply two matrices

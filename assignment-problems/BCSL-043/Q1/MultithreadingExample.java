@@ -1,3 +1,4 @@
+package Q1;
 public class MultithreadingExample {
     public static void main(String[] args) {
       Thread thread1 = new Thread(new Task1());
