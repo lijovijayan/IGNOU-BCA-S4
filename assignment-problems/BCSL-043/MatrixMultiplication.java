@@ -49,3 +49,23 @@ public class MatrixMultiplication {
     printMatrix(result, "Product");
   }
 }
+
+
+
+// Output:
+
+// Matrix A
+
+// 1 2 3
+// 4 5 6
+
+// Matrix B
+
+// 7 8
+// 9 10
+// 11 12
+
+// Matrix Product
+
+// 58 64
+// 139 154
