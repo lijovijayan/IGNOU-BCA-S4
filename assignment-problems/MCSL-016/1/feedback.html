@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library Management System - Feedback</title>
+        <style>
+            /* Define styles for header and menu (same as on index.html) */
+            .header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+            .menu {
+                text-align: center;
+                padding: 10px;
+            }
+            .menu a {
+                margin: 0 10px;
+            }
+
+            /* Define styles for the content division */
+            .content {
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* Define styles for the feedback form */
+            form {
+                text-align: left;
+                margin: 0 auto;
+                width: 50%;
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="text"],
+            textarea {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                width: 100%;
+                background-color: #4caf50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Library Management System</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="member_list.html">Member List</a>
+            <a href="book_registration.html">Book Registration</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+        <div class="content">
+            <form>
+                <label for="memberName">Name:</label>
+                <input type="text" id="memberName" name="memberName" /><br />
+                <label for="feedbackSubject">Subject:</label>
+                <input type="text" id="feedbackSubject" name="feedbackSubject" /><br />
+                <label for="feedbackMessage">Message:</label>
+                <textarea id="feedbackMessage" name="feedbackMessage"></textarea><br />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </body>
+</html>
