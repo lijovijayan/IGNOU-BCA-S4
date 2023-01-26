@@ -8,6 +8,6 @@
         "gh-pages": "^5.0.0"
     },
     "scripts": {
-        "deploy": "gh-pages -d ."
+        "deploy": "gh-pages -d ./MCSL-016/1/"
     }
 }
