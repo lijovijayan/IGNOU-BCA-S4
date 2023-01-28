@@ -40,3 +40,7 @@ int main()
     }
     return 0;
 }
+
+// OUTPUT:
+
+// Element is present at index 17
