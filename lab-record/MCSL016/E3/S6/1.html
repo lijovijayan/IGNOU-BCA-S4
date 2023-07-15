@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            #clock {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clock"></div>
+
+        <script>
+            function updateClock() {
+                const clockElement = document.getElementById("clock");
+                const currentTime = new Date();
+                const hours = currentTime.getHours();
+                const minutes = currentTime.getMinutes();
+                const seconds = currentTime.getSeconds();
+
+                // Format the time with leading zeros
+                const formattedTime = formatTime(hours) + ":" + formatTime(minutes) + ":" + formatTime(seconds);
+
+                // Update the clock element
+                clockElement.textContent = formattedTime;
+            }
+
+            function formatTime(time) {
+                return time.toString().padStart(2, "0");
+            }
+
+            // Update the clock every second
+            setInterval(updateClock, 1000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Use the date function get Date & set Date to prompt the user for an integer b/w
+1 – 31 & return day of the week it represents. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Day of the Week</title>
+        <script>
+            function getDayOfWeek() {
+                // Get the current date
+                const currentDate = new Date();
+
+                // Prompt the user for a number between 1 and 31
+                const userNumber = prompt("Enter a number between 1 and 31:");
+
+                // Convert the user input to an integer
+                const dayNumber = parseInt(userNumber);
+
+                // Validate the user input
+                if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 31) {
+                    document.getElementById("result").textContent =
+                        "Invalid input. Please enter a number between 1 and 31.";
+                } else {
+                    // Set the day of the month using the user input
+                    currentDate.setDate(dayNumber);
+
+                    // Get the day of the week
+                    const dayOfWeek = currentDate.toLocaleDateString(undefined, { weekday: "long" });
+
+                    // Display the day of the week
+                    document.getElementById("result").textContent = "The day of the week is: " + dayOfWeek;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="getDayOfWeek()">Get Day of the Week</button>
+        <div id="result"></div>
+    </body>
+</html>

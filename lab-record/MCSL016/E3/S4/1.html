@@ -1,0 +1,31 @@
+<!-- Write a program to move a text with mouse pointer. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Move Text with Mouse Pointer</title>
+        <style>
+            #text {
+                position: absolute;
+                font-size: 20px;
+                user-select: none; /* Prevent text selection */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text">Move me with your mouse!</div>
+
+        <script>
+            // Get the text element
+            const text = document.getElementById("text");
+
+            // Track mouse movement and update text position
+            document.addEventListener("mousemove", (event) => {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                text.style.left = mouseX + "px";
+                text.style.top = mouseY + "px";
+            });
+        </script>
+    </body>
+</html>

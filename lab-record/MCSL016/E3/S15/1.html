@@ -1,0 +1,59 @@
+<!-- Use JavaScript for authentication and verification of the textboxes in the static
+site developed by the student in the HTML exercise. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authentication and Verification</title>
+        <style>
+          label {
+            display: inline-block;
+            min-width: 100px;
+          }
+        </style>
+        <script>
+            function validateAndVerifyTheForm() {
+                var email = document.forms["loginForm"]["email"].value;
+                var password = document.forms["loginForm"]["password"].value;
+
+                if (email === "") {
+                    alert("Please enter your email.");
+                    return false;
+                }
+
+                if (password === "") {
+                    alert("Please enter your password.");
+                    return false;
+                }
+
+                //Valid email and password combinations for authenticate the user
+                const users = [
+                    { email: "user1@example.com", password: "password1" },
+                    { email: "user2@example.com", password: "password2" },
+                ];
+
+                // Authenticate the user
+                for (var i = 0; i < users.length; i++) {
+                    if (email === users[i].email && password === users[i].password) {
+                        alert("Authentication successful. Welcome, " + email + "!");
+                        return true;
+                    }
+                }
+
+                alert("Invalid email or password. Please try again.");
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form name="loginForm" onsubmit="return validateAndVerifyTheForm()" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" /><br /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /><br /><br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
