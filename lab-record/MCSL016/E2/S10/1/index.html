@@ -1,0 +1,19 @@
+<!-- Design a series of three HTML Pages for ABC. COM each called from the previous one. Accept Name on the first page. When
+the user clicks on the enter button, second page should open. The second page should not display the name but a ‘Welcome
+screen with some information about ABC.COM. When the user will click on the ‘next’ button it should display the name
+accepted in page 1 on page 3. (Hint: you may use hidden fields) -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 1</title>
+    </head>
+    <body>
+        <h1>Page 1</h1>
+        <form action="page-2.html" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <input type="submit" value="Enter" />
+        </form>
+    </body>
+</html>

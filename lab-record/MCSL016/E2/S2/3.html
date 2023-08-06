@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frame Example</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            #frame1 {
+                background-color: #ffcccc; /* Light red */
+            }
+
+            #frame2 {
+                background-color: #ccffcc; /* Light green */
+            }
+
+            #frame3 {
+                background-color: #ccccff; /* Light blue */
+            }
+
+            #frame4 {
+                background-color: #ffffcc; /* Light yellow */
+            }
+        </style>
+    </head>
+    <frameset rows="50%, 50%">
+        <frame src="page1.html" id="frame1" />
+        <frameset cols="50%, 50%">
+            <frame src="page2.html" id="frame2" />
+            <frame src="page3.html" id="frame3" />
+        </frameset>
+    </frameset>
+</html>

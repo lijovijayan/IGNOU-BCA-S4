@@ -1,0 +1,33 @@
+<!-- Display time and print message accordingly e.g., ‘Good Morning’ in Morning
+etc. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greeting Based on Time</title>
+        <script>
+            function displayGreeting() {
+                const currentTime = new Date();
+                const currentHour = currentTime.getHours();
+                const greetingElement = document.getElementById("greeting");
+
+                document.getElementById("time").textContent =
+                    "Current Time: " + currentTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+                if (currentHour >= 0 && currentHour < 12) {
+                    greetingElement.textContent = "Good Morning";
+                } else if (currentHour >= 12 && currentHour < 18) {
+                    greetingElement.textContent = "Good Afternoon";
+                } else {
+                    greetingElement.textContent = "Good Evening";
+                }
+            }
+
+            window.onload = displayGreeting;
+        </script>
+    </head>
+    <body>
+        <p id="time"></p>
+        <p id="greeting"></p>
+    </body>
+</html>

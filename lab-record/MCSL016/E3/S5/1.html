@@ -1,0 +1,27 @@
+<!-- Write a JavaScript code to accept radius & display the area of the circle. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate Circle Area</title>
+    </head>
+    <body>
+        <script>
+            // Prompt the user to enter the radius
+            const radius = prompt("Enter the radius of the circle:");
+
+            // Convert the input to a number
+            const radiusNumber = parseFloat(radius);
+
+            // Check if the input is a valid number
+            if (isNaN(radiusNumber) || radiusNumber <= 0) {
+                alert("Invalid radius. Please enter a positive number.");
+            } else {
+                // Calculate the area of the circle
+                const area = Math.PI * Math.pow(radiusNumber, 2);
+
+                // Display the area
+                alert("The area of the circle is: " + area.toFixed(2));
+            }
+        </script>
+    </body>
+</html>

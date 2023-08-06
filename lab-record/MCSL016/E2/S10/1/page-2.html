@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Welcome to ABC.COM</h1>
+    <p>Some information about ABC.COM goes here...</p>
+    <form action="page-3.html" method="get">
+        <input type="hidden" id="name" name="name">
+        <input type="submit" value="Next">
+    </form>
+    
+    <script>
+        // Retrieve name from URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        
+        // Set the hidden field value on page2.html
+        document.getElementById("name").value = name;
+    </script>
+</body>
+</html>

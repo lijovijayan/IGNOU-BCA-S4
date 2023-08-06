@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Information Form</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            h1 {
+                padding-bottom: 10px;
+            }
+            label {
+                display: inline-block;
+                min-width: 200px;
+                padding-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Information Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <br />
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <br />
+
+            <label for="marks-10+2">Marks in 10+2:</label>
+            <input type="number" id="marks-10+2" name="marks-10+2" required />
+
+            <br />
+
+            <label for="marks-graduation">Marks in Graduation:</label>
+            <input type="number" id="marks-graduation" name="marks-graduation" required />
+
+            <br />
+
+            <label for="marks-postgraduation">Marks in Post Graduation:</label>
+            <input type="number" id="marks-postgraduation" name="marks-postgraduation" required />
+
+            <br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

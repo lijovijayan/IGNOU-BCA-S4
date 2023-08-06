@@ -1,0 +1,31 @@
+<!-- Create a Web page using two image files, which switch b/w one another as the
+mouse pointer moves over the image. Use the On Mouse over and On Mouse
+out event handler -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Switch on Mouseover</title>
+    </head>
+    <body>
+        <center>
+            <img width="500px" id="image" src="beagle-1.jpeg" onmouseover="switchImage()" onmouseout="switchImage()" />
+        </center>
+
+        <script>
+            // Variables to track image state
+            let currentImage = 1;
+            const imageElement = document.getElementById("image");
+
+            // Function to switch between image files
+            function switchImage() {
+                if (currentImage === 1) {
+                    imageElement.src = "beagle-2.jpg";
+                    currentImage = 2;
+                } else {
+                    imageElement.src = "beagle-1.jpeg";
+                    currentImage = 1;
+                }
+            }
+        </script>
+    </body>
+</html>

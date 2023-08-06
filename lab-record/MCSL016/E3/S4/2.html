@@ -1,0 +1,42 @@
+<!-- Write a program to change colour of text randomly. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Text Color</title>
+    <style>
+        #text {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">This text will change color randomly!</div>
+
+    <script>
+        // Get the text element
+        const text = document.getElementById('text');
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to change text color randomly
+        function changeTextColor() {
+            const randomColor = getRandomColor();
+            text.style.color = randomColor;
+        }
+
+        // Change text color initially
+        changeTextColor();
+
+        // Change text color periodically
+        setInterval(changeTextColor, 1000); // Change every 1 second
+    </script>
+</body>
+</html>

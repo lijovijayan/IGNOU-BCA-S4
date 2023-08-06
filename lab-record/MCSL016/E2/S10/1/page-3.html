@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 3</title>
+    </head>
+    <body>
+        <h1>Page 3</h1>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get("name");
+            
+            // Display the name
+            document.write("<p>Welcome, " + name + "!</p>");
+        </script>
+    </body>
+</html>
